@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct CartView: View {
-    @EnvironmentObject var cart: Cart
+    
+    // TODO : Déclarer une variable "cart" de type "Cart"
+    // cette variable fait référence au panier stocké dans l'environnement de l'application
     
     var body: some View {
         VStack {
-            List(cart.products) { product in
-                ProductCartRow(product: product)
-            }
+            // TODO : Faire une liste pour afficher les produits du panier en utilisant la custom view "ProductCartRow"
             Spacer()
             Text(String(format: "Total : %.2f €", caculate())).fontWeight(.bold).frame(width: 300).padding().background(Color.blue).foregroundColor(.white).cornerRadius(8)
 
@@ -25,9 +25,7 @@ struct CartView: View {
     func caculate() -> Double {
         var total = 0.0
         
-        cart.products.forEach { product in
-            total += Double(product.quantity) * product.price
-        }
+        // TODO : Calculer le prix tu panier
         
         return total
     }

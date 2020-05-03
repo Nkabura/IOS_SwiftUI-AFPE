@@ -11,7 +11,7 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var cart = Cart()
+    // TODO : Déclarer une varaiable "cart" de type "Cart", cette variable le représente le panier d'achat
     
     var window: UIWindow?
 
@@ -26,7 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ProductsView().environmentObject(cart)
+        
+        // TODO : Injecter la variable "cart" afin de la rendre accessible depuis toutes les vues de l'application
+        let contentView = ProductsView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

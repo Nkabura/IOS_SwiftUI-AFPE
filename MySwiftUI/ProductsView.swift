@@ -10,14 +10,14 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    @EnvironmentObject var cart: Cart
+    // TODO : Déclarer une variable "cart" de type "Cart"
+    // cette variable fait référence au panier stocké dans l'environnement de l'application
     
     var body: some View {
         NavigationView {
             VStack {
-                List(cart.products) { product in
-                    ProductRow(product: product)
-                }
+                // TODO : Faire une liste pour afficher les produits à mettre au panier en utilisant la custom view "ProductRow".
+                // Pour faire simple, ces produits sont ceux du panier (variable "cart")
                 Spacer()
                 NavigationLink(destination: CartView(), label: {
                     Text("Voir mon panier").padding().background(Color.red).foregroundColor(.white).cornerRadius(8)

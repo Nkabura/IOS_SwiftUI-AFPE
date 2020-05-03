@@ -11,7 +11,8 @@ import SwiftUI
 struct ProductRow: View {
     
     var product: Product
-    @EnvironmentObject var cart: Cart
+    // TODO : Déclarer une variable "cart" de type "Cart"
+    // cette variable fait référence au panier stocké dans l'environnement de l'application
     
     var body: some View {
         HStack {
@@ -31,19 +32,18 @@ struct ProductRow: View {
     }
     
     func removeFromCart() {
-        for i in 0..<cart.products.count {
-            if cart.products[i].quantity > 0  && cart.products[i].name == product.name {
-                cart.products[i].quantity -= 1
-            }
-        }
+        // TODO : Faire une boucle qui :
+        // - permet de parcourir les produits du panier (cart.products)
+        // - permet de mettre à jour les quantités du produit concerné (cart.products[i].quantity),
+        // pour faire simple le produit concerné est retrouvé grâce à son nom (cart.products[i].name)
+        // - ATTENTION : VERIFIER LA QUANTITE AVANT DE RETIRER UNE QUANTITE, CELLE-CI NE DOIT PAS ETRE INFERIEURE A 0
     }
     
     func addToCart() {
-        for i in 0..<cart.products.count {
-            if cart.products[i].name == product.name {
-                cart.products[i].quantity += 1
-            }
-        }
+        // TODO : Faire une boucle qui :
+        // - permet de parcourir les produits du panier (cart.products)
+        // - permet de mettre à jour les quantités du produit concerné (cart.products[i].quantity),
+        // pour faire simple le produit concerné est retrouvé grâce à son nom (cart.products[i].name)
     }
 }
 
