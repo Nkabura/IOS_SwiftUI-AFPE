@@ -11,7 +11,7 @@ import SwiftUI
 struct ProductRow: View {
     
     var product: Product
-    // TODO : Déclarer une variable "cart" de type "Cart"
+    // TODO-6 : Déclarer une variable "cart" de type "Cart"
     // cette variable fait référence au panier stocké dans l'environnement de l'application
     
     var body: some View {
@@ -32,7 +32,7 @@ struct ProductRow: View {
     }
     
     func removeFromCart() {
-        // TODO : Faire une boucle qui :
+        // TODO-7 : Faire une boucle qui :
         // - permet de parcourir les produits du panier (cart.products)
         // - permet de mettre à jour les quantités du produit concerné (cart.products[i].quantity),
         // pour faire simple le produit concerné est retrouvé grâce à son nom (cart.products[i].name)
@@ -40,7 +40,7 @@ struct ProductRow: View {
     }
     
     func addToCart() {
-        // TODO : Faire une boucle qui :
+        // TODO-8 : Faire une boucle qui :
         // - permet de parcourir les produits du panier (cart.products)
         // - permet de mettre à jour les quantités du produit concerné (cart.products[i].quantity),
         // pour faire simple le produit concerné est retrouvé grâce à son nom (cart.products[i].name)

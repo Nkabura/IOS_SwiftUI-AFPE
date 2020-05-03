@@ -10,13 +10,13 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    // TODO : Déclarer une variable "cart" de type "Cart"
+    // TODO-4 : Déclarer une variable "cart" de type "Cart"
     // cette variable fait référence au panier stocké dans l'environnement de l'application
     
     var body: some View {
         NavigationView {
             VStack {
-                // TODO : Faire une liste pour afficher les produits à mettre au panier en utilisant la custom view "ProductRow".
+                // TODO-5 : Faire une liste pour afficher les produits à mettre au panier en utilisant la custom view "ProductRow".
                 // Pour faire simple, ces produits sont ceux du panier (variable "cart")
                 Spacer()
                 NavigationLink(destination: CartView(), label: {
