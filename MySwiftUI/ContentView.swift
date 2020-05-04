@@ -20,12 +20,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
+                // TODO-5 : Récupérer les users depuis le ViewModel
                 ForEach(users) { user in
                     HStack {
                         Text(user.name)
                         Text("\(user.age) ans")
                         Spacer()
-                        // TODO-5 : Appeler la fonction depuis le ViewModel
+                        // TODO-6 : Appeler la fonction depuis le ViewModel
                         if self.isOfAge(user: user) {
                             Text("majeur").foregroundColor(.green)
                         } else {
@@ -33,7 +34,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                // TODO-6 : Appeler la fonction depuis le ViewModel
+                // TODO-7 : Appeler la fonction depuis le ViewModel
                 .onDelete(perform: deleteUsers)
             }
             .navigationBarTitle("Utilisateurs")
@@ -70,4 +71,4 @@ struct User: Identifiable {
 }
 
 
-// TODO-7 : Challenge!!! -> Rendre possible l'ajout d'un utilsateur en demandant son nom et son âge. L'utilisateur doit apparaître dans la liste suite à l'ajout
+// TODO-8 : Challenge!!! -> Rendre possible l'ajout d'un utilsateur en demandant son nom et son âge. L'utilisateur doit apparaître dans la liste suite à l'ajout
