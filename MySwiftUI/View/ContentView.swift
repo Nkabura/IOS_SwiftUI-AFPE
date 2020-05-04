@@ -42,4 +42,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// TODO-7 : Challenge!!! -> Rendre possible l'ajout d'un utilsateur en demandant son nom et son âge. L'utilisateur doit apparaître dans la liste suite à l'ajout
+// TODO-8 : Challenge!!! -> Rendre possible l'ajout d'un utilsateur en demandant son nom et son âge. L'utilisateur doit apparaître dans la liste suite à l'ajout
